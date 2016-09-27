@@ -38,8 +38,6 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        txtResultado = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMatrizResultante = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -61,17 +59,9 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("Operaciones con Matrices");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, -1, -1));
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultado"));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtResultado.setEditable(false);
-        jPanel3.add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 280, 30));
-
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 380, 70));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 410, 50));
 
         tblMatrizResultante.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -83,7 +73,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblMatrizResultante);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 320, 180));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 320, 180));
 
         tblMatrizInicial.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,23 +85,25 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblMatrizInicial);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 320, 180));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 320, 180));
 
         cmbOperaciones.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         cmbOperaciones.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Diagonal Secundaria", "Triangular Superior", "Triangular Inferior", "Traspuesta A La Ingresada", "La Letra A", "La Letra Z", "La Letra T", "La Letra V", "La Letra E", "La Letra F", "La Letra P", "La Letra I", "La Letra N", "La Letra Y", "La Letra X" }));
-        jPanel2.add(cmbOperaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 170, -1));
+        jPanel2.add(cmbOperaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 170, -1));
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Acciones"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 14))); // NOI18N
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        cmdCrear.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         cmdCrear.setText("Crear");
         cmdCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCrearActionPerformed(evt);
             }
         });
-        jPanel4.add(cmdCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jPanel4.add(cmdCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 30, 80, -1));
 
+        cmdLlenadoManual.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         cmdLlenadoManual.setText("Manual");
         cmdLlenadoManual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,14 +112,16 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel4.add(cmdLlenadoManual, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 80, -1));
 
+        cmdLlenadoAutomatico.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         cmdLlenadoAutomatico.setText("Automático");
         cmdLlenadoAutomatico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdLlenadoAutomaticoActionPerformed(evt);
             }
         });
-        jPanel4.add(cmdLlenadoAutomatico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 90, -1));
+        jPanel4.add(cmdLlenadoAutomatico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 100, -1));
 
+        cmdLimpiar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         cmdLimpiar.setText("Limpiar");
         cmdLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +130,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel4.add(cmdLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
+        cmdOperacion.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         cmdOperacion.setText("Operación");
         cmdOperacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,14 +139,16 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel4.add(cmdOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 470, 70));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 470, 70));
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos Iniciales"));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Iniciales", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 14))); // NOI18N
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel6.setText("Número de Columnas: ");
         jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, 20));
 
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel7.setText("Número de Filas: ");
         jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 20));
 
@@ -169,7 +166,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel5.add(txtNumeroColumnas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 40, -1));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 360, 70));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 360, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -179,10 +176,10 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(894, 474));
+        setSize(new java.awt.Dimension(894, 399));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -201,22 +198,44 @@ public class Principal extends javax.swing.JFrame {
 
         tm2.setRowCount(nf);
         tm2.setColumnCount(nc);
-        
-        cmbOperaciones.setEnabled(true);
+
+        cmbOperaciones.setEnabled(false);
         cmdCrear.setEnabled(false);
         cmdLlenadoManual.setEnabled(true);
         cmdLlenadoAutomatico.setEnabled(true);
-        cmdOperacion.setEnabled(true);
+        cmdOperacion.setEnabled(false);
         cmdLimpiar.setEnabled(false);
         txtNumeroFilas.setEditable(false);
         txtNumeroColumnas.setEditable(false);
-
     }//GEN-LAST:event_cmdCrearActionPerformed
+
+    private void cmdLlenadoManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLlenadoManualActionPerformed
+
+        int aux, nf, nc;
+
+        nf = tblMatrizInicial.getRowCount();
+        nc = tblMatrizInicial.getColumnCount();
+
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = Integer.parseInt(JOptionPane.showInputDialog("Por Favor Llene La Casilla No. : " + i + "," + j));
+                tblMatrizInicial.setValueAt(aux, i, j);
+            }
+        }
+        cmbOperaciones.setEnabled(true);
+        cmdCrear.setEnabled(false);
+        cmdLlenadoManual.setEnabled(false);
+        cmdLlenadoAutomatico.setEnabled(false);
+        cmdOperacion.setEnabled(true);
+        cmdLimpiar.setEnabled(true);
+        txtNumeroFilas.setEditable(false);
+        txtNumeroColumnas.setEditable(false);
+    }//GEN-LAST:event_cmdLlenadoManualActionPerformed
 
     private void cmdLlenadoAutomaticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLlenadoAutomaticoActionPerformed
 
         int aux, nf, nc;
-        
+
         nf = tblMatrizInicial.getRowCount();
         nc = tblMatrizInicial.getColumnCount();
 
@@ -233,68 +252,95 @@ public class Principal extends javax.swing.JFrame {
             cmdLimpiar.setEnabled(false);
             txtNumeroFilas.setEditable(false);
             txtNumeroColumnas.setEditable(false);
-
         }
     }//GEN-LAST:event_cmdLlenadoAutomaticoActionPerformed
 
     private void cmdOperacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdOperacionActionPerformed
 
-        int op, nf, nc, cont, aux;
+        int op, nf, nc, Cont, Aux;
 
         op = cmbOperaciones.getSelectedIndex();
         nf = tblMatrizInicial.getRowCount();
         nc = tblMatrizInicial.getColumnCount();
-        cont = 0;
+        Cont = 0;
 
         switch (op) {
             case 0:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
                         if (nc - 1 - i == j) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
                 }
                 break;
             case 1:
+                for (int i = 0; i < nf; i++) {
+                    for (int j = 0; j < nc; j++) {
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        if (i == j || j >= i) {
+                            tblMatrizResultante.setValueAt(Aux, i, j);
+                        }
+                    }
+                }
                 break;
             case 2:
+                for (int i = 0; i < nf; i++) {
+                    for (int j = 0; j < nc; j++) {
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        if (i == j || j <= i) {
+                            tblMatrizResultante.setValueAt(Aux, i, j);
+                        }
+                    }
+                }
                 break;
             case 3:
+                for (int i = 0; i < nf; i++) {
+                    for (int j = 0; j < nc; j++) {
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        tblMatrizResultante.setValueAt(Aux, j, i);
+                    }
+                }
                 break;
             case 4:
+                for (int i = 0; i < nf; i++) {
+                    for (int j = 0; j < nc; j++) {
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        if (j == 0 || i == 0 || i == (nf - 1) / 2 || j == (nc - 1)) {
+                            tblMatrizResultante.setValueAt(Aux, i, j);
+                        }
+                    }
+                }
                 break;
             case 5:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
                         if (i == 0 || i == (nf - 1) || nc - 1 - i == j) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
-
                 }
                 break;
             case 6:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
                         if (i == 0 || j == (nc / 2)) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
                 }
                 break;
             case 7:
-
                 break;
             case 8:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
                         if (i == 0 || i == (nf - 1) || j == 0 || i == (nf / 2)) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
                 }
@@ -302,22 +348,29 @@ public class Principal extends javax.swing.JFrame {
             case 9:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
                         if (i == 0 || j == 0 || i == (nf / 2)) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
                 }
                 break;
             case 10:
-
+                for (int i = 0; i < nf; i++) {
+                    for (int j = 0; j < nc; j++) {
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        if ((j == 0 || i == 0 || i == nf / 2) || (j == nc - 1 && j / i >= 2)) {
+                            tblMatrizResultante.setValueAt(Aux, i, j);
+                        }
+                    }
+                }
                 break;
             case 11:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
                         if (j == (nc / 2)) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
                 }
@@ -325,27 +378,34 @@ public class Principal extends javax.swing.JFrame {
             case 12:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
                         if (j == 0 || i == j || j == (nc - 1)) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
                 }
                 break;
             case 13:
-
-                break;
-            case 14:
                 for (int i = 0; i < nf; i++) {
                     for (int j = 0; j < nc; j++) {
-                        aux = (int) tblMatrizInicial.getValueAt(i, j);
-                        if ((i) == j || nc - 1 - i == j) {
-                            tblMatrizResultante.setValueAt(aux, i, j);
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        if (j == nc / 2 && j <= i || (i + j == nf - 1 && i <= j) || (i == j && i + j <= nf)) {
+                            tblMatrizResultante.setValueAt(Aux, i, j);
                         }
                     }
                 }
                 break;
-    }//GEN-LAST:event_cmdOperacionActionPerformed
+            case 14:
+                for (int i = 0; i < nf; i++) {
+                    for (int j = 0; j < nc; j++) {
+                        Aux = (int) tblMatrizInicial.getValueAt(i, j);
+                        if ((i) == j || nc - 1 - i == j) {
+                            tblMatrizResultante.setValueAt(Aux, i, j);
+                        }
+                    }
+                }
+                break;
+        }
         cmbOperaciones.setEnabled(false);
         cmdCrear.setEnabled(false);
         cmdLlenadoManual.setEnabled(false);
@@ -354,7 +414,8 @@ public class Principal extends javax.swing.JFrame {
         cmdLimpiar.setEnabled(true);
         txtNumeroFilas.setEditable(false);
         txtNumeroColumnas.setEditable(false);
-    }
+    }//GEN-LAST:event_cmdOperacionActionPerformed
+
     private void cmdLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLimpiarActionPerformed
 
         int nf, nc;
@@ -367,7 +428,6 @@ public class Principal extends javax.swing.JFrame {
                 tblMatrizInicial.setValueAt("", i, j);
                 tblMatrizResultante.setValueAt("", i, j);
             }
-
         }
         cmbOperaciones.setEnabled(false);
         cmdCrear.setEnabled(true);
@@ -377,13 +437,11 @@ public class Principal extends javax.swing.JFrame {
         cmdLimpiar.setEnabled(false);
         txtNumeroFilas.setEditable(true);
         txtNumeroColumnas.setEditable(true);
-        
+
         txtNumeroFilas.setText("");
         txtNumeroColumnas.setText("");
         txtNumeroFilas.requestFocusInWindow();
         cmbOperaciones.setSelectedIndex(0);
-        txtResultado.setText("");
-
     }//GEN-LAST:event_cmdLimpiarActionPerformed
 
     private void txtNumeroFilasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroFilasKeyTyped
@@ -405,30 +463,6 @@ public class Principal extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txtNumeroColumnasKeyTyped
-
-    private void cmdLlenadoManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLlenadoManualActionPerformed
-        
-        int aux, nf, nc;
-        
-        nf = tblMatrizInicial.getRowCount();
-        nc = tblMatrizInicial.getColumnCount();
-        
-         for (int i = 0; i < nf; i++) {
-            for (int j = 0; j < nc; j++) {
-                aux = Integer.parseInt(JOptionPane.showInputDialog("Por Favor Llene La Casilla No. : " + i + "," + j));
-                tblMatrizInicial.setValueAt(aux, i, j);
-            }
-         }
-          cmbOperaciones.setEnabled(true);
-        cmdCrear.setEnabled(false);
-        cmdLlenadoManual.setEnabled(false);
-        cmdLlenadoAutomatico.setEnabled(false);
-        cmdOperacion.setEnabled(false);
-        cmdLimpiar.setEnabled(true);
-        txtNumeroFilas.setEditable(false);
-        txtNumeroColumnas.setEditable(false);
-    }//GEN-LAST:event_cmdLlenadoManualActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -475,7 +509,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
@@ -484,6 +517,5 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTable tblMatrizResultante;
     private javax.swing.JTextField txtNumeroColumnas;
     private javax.swing.JTextField txtNumeroFilas;
-    private javax.swing.JTextField txtResultado;
     // End of variables declaration//GEN-END:variables
 }
