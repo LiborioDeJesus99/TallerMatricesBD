@@ -72,6 +72,7 @@ public class Principal extends javax.swing.JFrame {
 
             }
         ));
+        tblMatrizResultante.setEnabled(false);
         jScrollPane1.setViewportView(tblMatrizResultante);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 320, 180));
@@ -84,6 +85,7 @@ public class Principal extends javax.swing.JFrame {
 
             }
         ));
+        tblMatrizInicial.setEnabled(false);
         jScrollPane2.setViewportView(tblMatrizInicial);
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 320, 180));
@@ -253,9 +255,12 @@ public class Principal extends javax.swing.JFrame {
                             j = nc;
                             i = nf;
                             sw = false;
+                            cmbOperaciones.setEnabled(false);
                             Helper.TablaPorDefecto(tblMatrizInicial);
                             Helper.TablaPorDefecto(tblMatrizResultante);
                         } else {
+                            cmbOperaciones.setEnabled(true);
+
                             aux = 0;
                         }
                     }
@@ -264,7 +269,6 @@ public class Principal extends javax.swing.JFrame {
         }
         JButton botonesH[] = {cmdOperacion, cmdLimpiar};
         JButton botonesD[] = {cmdCrear, cmdLlenadoManual, cmdLlenadoAutomatico};
-        cmbOperaciones.setEnabled(true);
         Helper.HabilitarBotones(botonesH);
         Helper.DeshabilitarBotones(botonesD);
     }//GEN-LAST:event_cmdLlenadoManualActionPerformed
